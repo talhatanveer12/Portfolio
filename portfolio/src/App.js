@@ -13,6 +13,11 @@ import About from "./components/About";
 import MySkill from "./components/MySkill";
 import MyResume from "./components/MyResume";
 import Client from "./components/Client";
+import Portfolio from "./components/Portfolio";
+import ProjectDetail from "./components/ProjectDetail";
+import Content from "./components/Content";
+import Blog from "./components/Blog";
+import BlogDetail from "./components/BlogDetail";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +25,11 @@ const router = createBrowserRouter(
       <Route path="/" element={<Navbar />}>
         <Route index element={<Home />}></Route>
         <Route path="/about" element={<><About /><MySkill/><MyResume/><Client/></>}></Route>
+        <Route path="/portfolio" element={<Portfolio/>}></Route>
+        <Route path="/project/:name" element={<ProjectDetail/>}></Route>
+        <Route path="/content" element={<Content/>}></Route>
+        <Route path="/blog" element={<Blog/>}></Route>
+        <Route path="/blog/:name" element={<BlogDetail/>}></Route>
       </Route>
     </React.Fragment>
   )

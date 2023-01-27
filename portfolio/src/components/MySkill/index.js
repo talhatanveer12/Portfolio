@@ -34,10 +34,10 @@ const mySkill = [
 
 const MySkill = () => {
   return (
-    <section class="header">
+    <>
       {/* <section className="bg-black text-white">
         <div className="container max-w-5xl px-4 py-12 mx-auto">*/}
-      <div className="grid gap-4 mx-4 sm:grid-cols-1 md:grid-cols-12">
+      <div className="grid gap-4 mx-4 sm:grid-cols-1 md:grid-cols-12 lg:mt-48">
         <div className="sm:col-span-12 md:col-span-2 mr-8">
           <div className="flex justify-center mt-4 pl-4">
             <span className="text-sky-600 text-5xl font-sans font-semibold  leading-12">
@@ -72,7 +72,7 @@ const MySkill = () => {
       {/* </div>
         </div>
       </section> */}
-    </section>
+    </>
   );
 };
 

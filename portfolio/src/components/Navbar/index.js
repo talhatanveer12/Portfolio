@@ -8,9 +8,9 @@ import { Link } from "react-router-dom";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  { name: "Portfolio", href: "#" },
-  { name: "Content", href: "#" },
-  { name: "Blog", href: "#" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "Content", href: "/content" },
+  { name: "Blog", href: "/blog" },
 ];
 
 export default function Example(props) {
@@ -23,7 +23,7 @@ export default function Example(props) {
     <div className="isolate bg-black sm:mb-32 md:mb-0">
       <div className="fixed inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
         <svg
-          className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+          className="relative  left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
           viewBox="0 0 1155 678"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -42,6 +42,7 @@ export default function Example(props) {
               y2="474.645"
               gradientUnits="userSpaceOnUse"
             >
+            
               <stop stopColor="#9089FC" />
               <stop offset={1} stopColor="#FF80B5" />
             </linearGradient>
