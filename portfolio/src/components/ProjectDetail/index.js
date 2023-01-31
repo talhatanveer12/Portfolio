@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router";
 import { getMyProjectDetail } from "../../store/Portfolio/portfolioAction";
+import { Markup } from 'interweave';
 
 const ProjectDetail = () => {
   const { name } = useParams();
@@ -37,7 +38,7 @@ const ProjectDetail = () => {
               <b>Description</b>
             </h3>
             <p class="font-light text-left  text-gray-500 sm:text-xl dark:text-gray-400">
-              {projectDetail[0]?.description}
+              <Markup content={projectDetail[0]?.description}></Markup>
             </p>
             <h3 class="font-light font-bold  text-left mt-2 text-white sm:text-xl dark:text-gray-400">
               <b>Feature</b>
@@ -60,3 +61,4 @@ const ProjectDetail = () => {
 };
 
 export default ProjectDetail;
+

@@ -1,4 +1,4 @@
-import { getProject, getProjectDetail } from "./portfolioSlice";
+import { getBlog, getBlogDetail, getProject, getProjectDetail } from "./portfolioSlice";
 
 export const getMyProject = () => async (dispatch) => {
   try {
@@ -49,5 +49,47 @@ export const getMyProjectDetail = (name) => async (dispatch) => {
       }
     }
     dispatch(getProjectDetail(myProject));
+  } catch (error) {}
+};
+
+export const getMyBlogs = () => async (dispatch) => {
+  try {
+    const response = await fetch(
+      "https://portfolio-7f55d-default-rtdb.firebaseio.com/blog.json"
+    );
+    const result = await response.json();
+    const myBlog = [];
+    for (const key in result) {
+      myBlog.push({
+        id: key,
+        title: result[key].title,
+        subtitle: result[key].subtitle,
+        description: result[key].description,
+        image: result[key].images,
+      });
+    }
+    dispatch(getBlog(myBlog));
+  } catch (error) {}
+};
+
+export const getMyBlogDetail = (name) => async (dispatch) => {
+  try {
+    const response = await fetch(
+      "https://portfolio-7f55d-default-rtdb.firebaseio.com/blog.json"
+    );
+    const result = await response.json();
+    const myProject = [];
+    for (const key in result) {
+      if (result[key].title === name) {
+        myProject.push({
+          id: key,
+          title: result[key].title,
+          subtitle: result[key].subtitle,
+          description: result[key].decsription,
+          image: result[key].images,
+        });
+      }
+    }
+    dispatch(getBlogDetail(myProject));
   } catch (error) {}
 };

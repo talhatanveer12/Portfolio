@@ -56,7 +56,7 @@ const MySkill = () => {
                   <img
                     width="64"
                     height="64"
-                    color="#ffffff"
+                    color="#000"
                     src={item.logo}
                     alt=""
                   />

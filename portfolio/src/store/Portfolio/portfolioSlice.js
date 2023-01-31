@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     project: [],
     blog: [],
-    projectDetail: []
+    projectDetail: [],
+    blogDetail: [],
 }
 
 const portfolioSlice  = createSlice({
@@ -17,11 +18,14 @@ const portfolioSlice  = createSlice({
             state.blog = action.payload;
         },
         getProjectDetail: (state,action) => {
-            state.projectDetail = action.payload;;
+            state.projectDetail = action.payload;
+        },
+        getBlogDetail: (state,action) => {
+            state.blogDetail = action.payload;
         }
     }
 });
 
 export default portfolioSlice;
 
-export const {getProject,getBlog,getProjectDetail} = portfolioSlice.actions;
+export const {getProject,getBlog,getProjectDetail,getBlogDetail} = portfolioSlice.actions;
